@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cicxv4n4faeob"]
+[gd_scene load_steps=7 format=3 uid="uid://cicxv4n4faeob"]
 
 [ext_resource type="Script" path="res://Scripts/objeto_interativo.gd" id="1_pnuv8"]
-[ext_resource type="PackedScene" uid="uid://c4r31xcpixdwo" path="res://Itens/lixo_teste2.tscn" id="2_od8w7"]
 [ext_resource type="PackedScene" uid="uid://rtxdhdes5xt0" path="res://ModeloItens/CaixaPapelaoFechada.glb" id="2_x7wpg"]
 [ext_resource type="PackedScene" uid="uid://c4n0qvnsxnego" path="res://ModeloItens/CaixaPapelaoAberta.glb" id="3_kfeuw"]
 [ext_resource type="PackedScene" uid="uid://dlw1sgxrlr72g" path="res://Itens/lixo_teste_bola.tscn" id="3_kw86p"]
@@ -20,18 +19,16 @@ modelo_fechado = NodePath("CaixaPapelaoFechada")
 modelo_aberto = NodePath("CaixaPapelaoAberta")
 shapes_fechados = [NodePath("CollisionShape3D2")]
 shapes_abertos = [NodePath("Shape_Ab"), NodePath("Shape_Ab2"), NodePath("Shape_Ab3"), NodePath("Shape_Ab4"), NodePath("Shape_Ab5"), NodePath("Shape_Ab6"), NodePath("Shape_Ab7"), NodePath("Shape_Ab8"), NodePath("Shape_Ab9")]
-loot_dentro = Array[PackedScene]([ExtResource("2_od8w7"), ExtResource("3_kw86p")])
+loot_dentro = Array[PackedScene]([ExtResource("3_kw86p")])
 
 [node name="CaixaPapelaoFechada" parent="." instance=ExtResource("2_x7wpg")]
 transform = Transform3D(0.342567, 0, 0, 0, 0.342567, 0, 0, 0, 0.342567, -0.410006, 0, 0)
-visible = false
 
 [node name="CaixaPapelaoAberta" parent="." instance=ExtResource("3_kfeuw")]
 transform = Transform3D(0.341373, 0, 0, 0, 0.341373, 0, 0, 0, 0.341373, -0.405444, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.691985, 0, 0, 0, 0.691985, 0, 0, 0, 0.691985, -0.239753, 0, 0)
-visible = false
 shape = SubResource("BoxShape3D_d8boo")
 
 [node name="Shape_Ab" type="CollisionShape3D" parent="."]

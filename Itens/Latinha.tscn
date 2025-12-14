@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b712eqftul3m8"]
+
+[ext_resource type="Script" path="res://Scripts/objeto_interativo.gd" id="1_8jjie"]
+[ext_resource type="PackedScene" uid="uid://b1kx06hoj8cal" path="res://ModeloItens/Latinha.glb" id="4_gvwi8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_myv8s"]
+height = 0.959702
+radius = 0.424371
+
+[node name="Latinha" type="RigidBody3D" node_paths=PackedStringArray("modelo_fechado", "shapes_fechados")]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_8jjie")
+modelo_fechado = NodePath("CollisionShape3D")
+shapes_fechados = [NodePath("CollisionShape3D")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.276075, 0, 0, 0, 0.276075, 0, 0, 0, 0.276075, 0, 0, 0)
+shape = SubResource("CylinderShape3D_myv8s")
+
+[node name="Latinha" parent="." instance=ExtResource("4_gvwi8")]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0)

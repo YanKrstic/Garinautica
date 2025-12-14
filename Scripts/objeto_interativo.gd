@@ -32,6 +32,13 @@ func _ready():
 		var qtd = randi_range(1, 3)
 		for i in range(qtd):
 			loot_dentro.append(tabela_de_loot.pick_random())
+			
+	print("--- DEBUG DO OBJETO: ", name, " ---")
+	print("Modelo Fechado: ", modelo_fechado)
+	print("Modelo Aberto: ", modelo_aberto)
+	if modelo_aberto:
+		print("O modelo aberto está visível? ", modelo_aberto.visible)
+		print("Posição do modelo aberto: ", modelo_aberto.global_position)
 
 # --- LÓGICA DE FÍSICA AO PEGAR/SOLTAR ---
 
