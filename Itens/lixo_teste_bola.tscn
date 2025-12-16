@@ -10,6 +10,7 @@
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_hbunl")
+pode_ser_aberto = false
 modelo_fechado = NodePath("MeshInstance3D")
 shapes_fechados = [NodePath("CollisionShape3D")]
 shapes_abertos = [null, null, null, null, null, null, null, null, null]
